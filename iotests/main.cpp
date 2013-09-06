@@ -78,7 +78,7 @@ int main(int argc, const char * argv[])
 	}
 	else
 	{
-		std::cout << "Filed to open input file!" << std::endl;
+		std::cout << "Failed to open input file!" << std::endl;
 		return 1;
 	}
 
@@ -138,7 +138,7 @@ int main(int argc, const char * argv[])
 	}
 	else
 	{
-		std::cout << "Filed to open output file!" << std::endl;
+		std::cout << "Failed to open output file!" << std::endl;
 		return 1;
 	}
 
