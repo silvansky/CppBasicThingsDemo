@@ -143,6 +143,43 @@ int main(int argc, const char * argv[])
 
 	std::cout << "hex 0xD002AC is " << convertFromBase(16, "D002AC") << std::endl;
 
+	// multidimensional arrays
+
+	// create
+	int **x = new int*[10];
+	for (int i = 0; i < 10; i++)
+	{
+		x[i] = new int[10];
+	}
+
+	// fill
+	for (int i = 0; i < 10; i++)
+	{
+		for (int j = 0; j < 10; j++)
+		{
+			x[i][j] = i + j;
+		}
+	}
+
+	// print
+	for (int i = 0; i < 10; i++)
+	{
+		for (int j = 0; j < 10; j++)
+		{
+			std::cout << x[i][j] << " ";
+		}
+		std::cout << std::endl;
+	}
+
+	// destroy
+	for (int i = 0; i < 10; i++)
+	{
+		delete [] x[i];
+	}
+
+	delete [] x;
+
+
     return 0;
 }
 
