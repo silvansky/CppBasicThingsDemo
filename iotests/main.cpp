@@ -134,6 +134,7 @@ int main(int argc, const char * argv[])
 		}
 
 		outputFile << std::endl;
+		outputFile.close();
 	}
 	else
 	{
